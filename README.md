@@ -1,2 +1,2 @@
 # cs50x
-This repository is for harvard's CS50x course.
+This repository is for Harvard's CS50x course.
