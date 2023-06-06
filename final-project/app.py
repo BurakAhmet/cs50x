@@ -138,6 +138,10 @@ def all_vehicles():
             return render_template("update_vehicle.html", vehicles=vehicle[0])
         delete_button = request.form.get("delete_button")
         if delete_button:
+            db.execute("SELECT vehicle_id FROM Route WHERE vehicle_id = ?", delete_button)
+            vehicle = db.fetchall()
+            if vehicle:
+                return apology("There is a route connected to this vehicle. You have to delete it first!")
             db.execute("DELETE FROM Vehicle WHERE vehicle_id = ?", delete_button)
             db.commit()
             flash("Vehicle deleted successfully!")
@@ -329,7 +333,7 @@ def bought_tickets():
 
 
 if __name__ == '__main__':
-    # app.debug = True
+    app.debug = True
     app.run()
 
     db.close()
