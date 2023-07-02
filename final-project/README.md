@@ -10,7 +10,11 @@ Structure of Relational Databases:
 Route(route_id, starting_station, destination, date, time_of_journey, price, vehicle_id(FK)) 
 Vehicle(vehicle_id, vehicle_type, passenger_capacity, route_id(FK)) 
 Ticket(ticket_id, customer_name, tc_no, vehicle_id(FK), route_id(FK), phone) 
-Admin(id, User_name, password) 
+Admin(id, User_name, password)
+
+
 
 Database Users and User Interfaces: There are two different types of database system users that differ in the way they hope to interact with the system. Different user interfaces are designed for different types of users. Thanks to the web application, admin users can add vehicles with the privileges granted to them, add expeditions, view the tickets for sale and make changes on them. Standard users, on the other hand, can enter the departure route and arrival route and inquire about company expedition. In addition, the user can query the tickets he has previously bought by entering his own name, tc number and phone number.
+
+https://github.com/BurakAhmet/cs50x/assets/89780902/82294710-df8a-496f-a184-2d22d4dfc90b
 
