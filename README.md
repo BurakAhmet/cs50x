@@ -1,2 +1,2 @@
 # cs50x
-This repository is for Harvard's CS50x course.
+Harvard's CS50x problem solutions.
